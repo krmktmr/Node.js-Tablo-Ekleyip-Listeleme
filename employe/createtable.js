@@ -3,10 +3,10 @@ var MongoClient = require("mongodb").MongoClient;
 
 MongoClient.connect(connectionstring,{useNewUrlParser : true},function(err,db){
     if (err) throw err;
-    var dbo = db.db("veritabanim");
+    var dbo = db.db("veritabanim")
     dbo.createCollection("musteriler",function(err,sonuc){
         if(err) throw err;
-        console.log("Tablo oluşturuldu!");
+        console.log("Tablo oluşturuldu!")
         db.close();
     });
 });

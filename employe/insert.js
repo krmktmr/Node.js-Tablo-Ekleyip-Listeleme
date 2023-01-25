@@ -5,7 +5,7 @@ let ekle = function(ad,yas,sinif) {
     const objectId = new ObjectId(stringId);
     var veri = {name : `${ad}`, age : `${yas}`,class: objectId};
     console.log(veri)
-    var connectionstring = "mongodb+srv://admin:nodejs@cluster0.n1tz0mb.mongodb.net/?retryWrites=true&w=majority";
+    var connectionstring = "mongodb+srv://admin:(password)@cluster0.n1tz0mb.mongodb.net/?retryWrites=true&w=majority";
     var MongoClient = require("mongodb").MongoClient;
     MongoClient.connect(connectionstring,{useNewUrlParser : true},function(err,db){
         if (err) throw err

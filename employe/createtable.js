@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', true);
-const uri = "mongodb+srv://admin:nodejs@cluster0.n1tz0mb.mongodb.net/veritabanim?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin:(password)@cluster0.n1tz0mb.mongodb.net/veritabanim?retryWrites=true&w=majority";
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true});
 

@@ -4,9 +4,18 @@ var connectionstring = "mongodb+srv://admin:nodejs@cluster0.n1tz0mb.mongodb.net/
           MongoClient.connect(connectionstring,{useNewUrlParser : true},function(err,db){
               if (err) throw err
               var dbo = db.db("veritabanim");
-              dbo.collection("musteriler").find({}).toArray(function(err,sonuc){
+              dbo.collection("schools").find({}).toArray(function(err,sonuc){
                   if (err) throw err;
                   console.log(sonuc);
-                  db.close();
                   }); 
+                  dbo.collection("classes").find({}).toArray(function(err,sonuc2){
+                    if (err) throw err;
+                    console.log(sonuc2);
+                    }); 
+                    dbo.collection("students").find({}).toArray(function(err,sonuc3){
+                      if (err) throw err;
+                      console.log(sonuc3);
+                      db.close();
+                      }); 
+                      
                 });

@@ -9,12 +9,14 @@ var durum
        var eklemedurumu =`${regstr}`.toUpperCase()
        if(eklemedurumu=="EVET")
        {
-          r1.question("Adı ? ", function(ad) {
-            r1.question("Memleketi ? ", function(memleket) {
-                let employe = require('./employe/index')
-                employe.ekle(`${ad}`,`${memleket}`)
-                r1.close();
+        r1.question("Adı SoyAdı ? ", function(ad) {
+          r1.question("Yaşı ? ", function(yas) {
+            r1.question("Sınıfı ? ", function(sinif) {
+              let employe = require('./employe/index')
+              employe.ekle(`${ad}`,`${yas}`,`${sinif}`)
+              r1.close();
             });
+          });
           });
         }
         else
